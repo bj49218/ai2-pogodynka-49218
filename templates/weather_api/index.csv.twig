@@ -1,0 +1,11 @@
+city,country,celsius,fahrenheit,date,cloudcover,humidity
+{% for measurement in measurements %}
+    {{"\n"|nl2br}}
+	{{- city -}},
+	{{- country -}},
+	{{- measurement.celsius -}},
+	{{- measurement.fahrenheit -}},
+	{{- measurement.date.format('Y-m-d') -}},
+	{{- measurement.cloudcover }},
+	{{- measurement.humidity }}
+{% endfor -%}
